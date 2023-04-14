@@ -16,3 +16,6 @@
 -- | Burnside               | 10       |
 
 
+SELECT neighborhood, SUM(reviews)
+FROM listings INNER JOIN reviews ON listings.id = reviews.listing_id
+GROUP BY neighborhood;
